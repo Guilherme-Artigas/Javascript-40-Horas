@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <title>Document</title>
+        <title>Aula 01 – Variáveis e Tipos Primitivos</title>
         <style>
             * {
                 box-sizing: border-box;
@@ -42,6 +42,10 @@
             main > h1 {
                 margin: 10px 0px;
             }
+            main > ul {
+                list-style-position: inside;
+                list-style-type: decimal;
+            }
 
             footer {
                 border-radius: 0px 0px 5px 5px;
@@ -54,14 +58,62 @@
     </head>
     <body>
         <header>
-            <h1>Teste</h1>
+            <h1>Variáveis e Tipos Primitivos</h1>
         </header>
         <main>
-            <h1>Teste</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae iusto est repellendus nisi. Aperiam minima, omnis, facilis at pariatur id reiciendis nulla, doloribus quis soluta velit. Odit odio dolorum natus?</p>
+            <h1>Armazenando Dados</h1>
+            <p>Aula explicando os conceitos iniciais de armazenamento de dados na programação, com a linguagem JavaScript. No JavaScript moderno, além de utilizar a palavra var, também podemos usar a palavra let.</p>
+            <br>
+            <p>Damos o nome para cada variável declarada de identificador, existem regras para a declaração de variáveis:</p>
+            <br>
+            <ul>
+                <li>Podem começar com letra, $ ou _</li>
+                <li>Não pode começar com números</li>
+                <li>É possível usar letras e números de forma mesclada</li>
+                <li>É possível usar acentos e símbolos</li>
+                <li>Não pode conter espaços</li>
+                <li>Não podem ser palavras reservadas</li>
+            </ul>
+            <br>
+            <p><strong>Dicas para a declaração de variáveis.</strong></p>
+            <br>
+            <ul>
+                <li>Maiúsculas e minúsculas fazem diferença</li>
+                <li>Tente usar nomes coerentes para as variáveis</li>
+                <li>Evite se tornar um “programador alfabeto” ou um “programador contador”</li>
+            </ul>
+            <br>
+            <p><strong>Data Types.</strong></p>
+            <br>
+            <ul>
+                <li>number:
+                    <ul style="list-style-type: none;">
+                        <li style="text-indent: 20px;">Infinity</li>
+                        <li style="text-indent: 20px;">NaN</li>
+                    </ul>
+                </li>
+                <li>string</li>
+                <li>boolean</li>
+                <li>null</li>
+                <li>undefined</li>
+                <li>object: 
+                    <ul style="list-style-type: none;">
+                        <li style="text-indent: 20px;">Array</li>
+                    </ul>
+                </li>
+                <li>function</li>
+            </ul>
         </main>
         <footer>
             <p>Aulas do Curso de <strong><a href="https://youtube.com/playlist?list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1" target="_blank">JavaScript</a></strong>. Exercícios praticados pelo aluno <strong><a href="https://github.com/Guilherme-Artigas" target="_blank">Guilherme Artigas</a></strong>.</p>
         </footer>
+        <script>
+            // Testando comentário de única linha
+            /*
+                Testando comentário de multiplas linhas.
+            */
+
+            // Ctrl + L (Limpa a tela do terminal do Node).
+        </script>
     </body>
 </html>
