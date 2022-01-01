@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <title>Document</title>
+        <title>Aula 02 – Tratamento de dados</title>
         <style>
             * {
                 box-sizing: border-box;
@@ -54,12 +54,55 @@
     </head>
     <body>
         <header>
-            <h1>Teste</h1>
+            <h1>Tratamento de dados</h1>
         </header>
         <main>
-            <h1>Teste</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae iusto est repellendus nisi. Aperiam minima, omnis, facilis at pariatur id reiciendis nulla, doloribus quis soluta velit. Odit odio dolorum natus?</p>
+            <h1>Number e String</h1>
+            <p>Aula falando sobre coleta de dados e a importância do tratamento dessas informações dentro da programação.</p>
+            <br>
+            <p>Aprendemos nessa aula que o comando window.prompt(‘’) usado para capturar um dado do usuário sempre ira retornar valores em string (texto), isso é uma característica do comando, nesse caso precisamos falar sobre a conversão de tipos de dados para o tratamento correto deles.</p>
+            <br>
+            <p>Conversão para números inteiros usamos:</p>
+            <p>Number.parseInt(nome da variável)</p>
+            <br>
+            <p>Conversão para números com ponto flutuante usamos:</p>
+            <p>Number.parseFloat(nome da variável)</p>
+            <br>
+            <p>Nas versões mais recentes da linguagem JavaScript podemos definir somente como Number e a própria linguagem vai saber definir se a número digitado é inteiro ou real (número com ponto flutuante).</p>
+            <br>
+            <p>Podemos chamar a declaração da seguinte forma:</p>
+            <p>var numero1 = Number(window.prompt(‘Digite o 1º número’))</p>
+            <br>
+            <h2>Conversão de número para String</h2>
+            <br>
+            <p>String(nome da variável)</p>
+            <p>ou</p>
+            <p>nome da variável.toString()</p>
+            <br>
+            <h2>Formatando Strings</h2>
+            <br>
+            <p>nome da variável.lenght (Quantos caracteres a string possue)</p>
+            <p>nome da variável.toUpperCase() (Converte todas as letras para MAIÚSCULAS)</p>
+            <p>noem da variável.toLowerCase() (Converte todas as letras para minúsculas)</p>
+            <br>
+            <h2>Formatando Números</h2>
+            <br>
+            <p>nome da variável.toFixed(2) (Quantidade de casas decimais)</p>
+            <p>nome da variável.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})</p>
         </main>
+        <script>
+            // var numero1 = Number.parseInt(window.prompt('Digite o 1º número: '))
+            // var numero2 = Number.parseInt(window.prompt('Digite o 2º número: '))
+
+            // O comando prompt sempre retorna string, nesse caso estamos usando a conversão direta para inteiro, com o comando Number.parseInt(nome da variável)
+
+            // var numero1 = Number(window.prompt('Digite o 1º número: '))
+            // var numero2 = Number(window.prompt('Digite o 2º número: '))
+            
+            // soma = numero1 + numero2
+
+            // window.alert('Legal! A soma entre ' + numero1 + ' e ' + numero2 + ' é ' + soma)
+        </script>
         <footer>
             <p>Aulas do Curso de <strong><a href="https://youtube.com/playlist?list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1" target="_blank">JavaScript</a></strong>. Exercícios praticados pelo aluno <strong><a href="https://github.com/Guilherme-Artigas" target="_blank">Guilherme Artigas</a></strong>.</p>
         </footer>
