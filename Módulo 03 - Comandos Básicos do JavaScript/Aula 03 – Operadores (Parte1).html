@@ -6,12 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <title>Document</title>
+        <title>Aula 03 – Operadores (Parte1)</title>
         <style>
             * {
                 box-sizing: border-box;
                 margin: 0px;
                 padding: 0px;
+            }
+
+            .nota {
+                background: rgba(250, 250, 210, .5);
+                padding: 5px;
             }
 
             body {
@@ -54,11 +59,73 @@
     </head>
     <body>
         <header>
-            <h1>Teste</h1>
+            <h1>Operadores (Parte1)</h1>
         </header>
         <main>
-            <h1>Teste</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae iusto est repellendus nisi. Aperiam minima, omnis, facilis at pariatur id reiciendis nulla, doloribus quis soluta velit. Odit odio dolorum natus?</p>
+            <h1>A importância dos operadores com JS</h1>
+            <p>Aula falando sobre a importância de operadores aritméticos dentro da programação e como o JavaScript trabalha com cada um deles.</p>
+            <br>
+            <h2>Operadores Aritméticos:</h2>
+            <br>
+            <p>Soma: 5 + 2 → 7</p>
+            <p>Subtração: 5 – 2 → 3</p>
+            <p>Multiplicação: 5 * 2 → 10</p>
+            <p>Divisão: 5 / 2 → 2.5</p>
+            <p>Resto da divisão: 5 % 2 → 1</p>
+            <p>Potencia: 5 ** 2 → 25</p>
+            <br>
+            <hr>
+            <br>
+            <h2>Ordem de precedência dos operadores</h2>
+            <br>
+            <p>Parenteses ()</p>
+            <p>Exponenciação **</p>
+            <p>Multiplicação *, Divisão /, Resto da divisão %</p>
+            <p>Soma +, Subtração -</p>
+            <br>
+            <hr>
+            <br>
+            <h2>Atribuição simples</h2>
+            <br>
+            <p>Dentro do JavaScript usamos o sinal de = para a atribuição de valores para dentro de uma variável, e na leitura do código sempre lemos “recebe”. Exemplo:</p>
+            <br>
+            <p>var numero1 = 5 + 3</p>
+            <p>No exemplo acima lemos que a variável numero1 esta recebendo o valor da operação entre 5 + 3.</p>
+            <br>
+            <p><strong>Vamos treinar a ordem de precedência dos operadores, abra o terminal e comprove os resultados:</strong></p>
+            <p>var operacao1 = 5 + 3 → 8</p>
+            <p>var operacao2 = operacao1 % 5 → 3    </p>
+            <p>var operacao3 = 5 * operacao2 ** 2 → 45</p>
+            <p>var operacao4 = 10 - operacao1 / 2 → 6</p>
+            <p>var operacao5 = 6 * 2 / operacao4 → 2</p>
+            <p>var operacao6 = operacao2 % operacao5 + 4 / operacao5 → 3</p>
+            <br>
+            <hr>
+            <br>
+            <h2>Auto Atribuições</h2>
+            <br>
+            <p>É quando dizemos que uma variável recebe ela mesma. Vamos ao exemplo:</p>
+            <br>
+            <p>var numero = 3</p>
+            <p>numero = numero + 4 → 7, variável numero recebe o valor dela mesma + 4 e passa a valer 7</p>
+            <p>numero = numero - 5 → 2, variável numero recebe o valor dela mesma - 5 e passa a valer 2</p>
+            <p>numero = numero * 4 → 8, variável numero recebe o valor dela mesma * 4 e passa a valer 8</p>
+            <p>numero = numero / 2 → 4, variável numero recebe o valor dela mesma / 2 e passa a valer 4</p>
+            <p>numero = numero ** 2 → 16, variável numero recebe o valor dela mesma ** 2 e passa a valer 16</p>
+            <p>numero = numero % 5 → 1, variável numero recebe o valor dela mesma % 5 e passa a valer 1</p>
+            <br>
+            <p><strong>Simplificando</strong></p>
+            <p>var numero = 3</p>
+            <p>numero += 4 → 7</p>
+            <p>numero -= 5 → 2</p>
+            <p>numero *= 4 → 8</p>
+            <p>numero /= 2 → 4</p>
+            <p>numero **= 2 → 16</p>
+            <p>numero %= 5 → 1</p>
+            <br>
+            <p class="nota"><strong>NOTA:</strong> Essa simplificação só é possível quando estamos operando variável dentro dela mesma, não é possível fazer essa simplificação com duas variáveis diferentes.</p>
+            <br>
+            <hr>
         </main>
         <footer>
             <p>Aulas do Curso de <strong><a href="https://youtube.com/playlist?list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1" target="_blank">JavaScript</a></strong>. Exercícios praticados pelo aluno <strong><a href="https://github.com/Guilherme-Artigas" target="_blank">Guilherme Artigas</a></strong>.</p>
