@@ -6,12 +6,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <title>Document</title>
+        <title>Aula 03 – Operadores (Parte 2)</title>
         <style>
             * {
                 box-sizing: border-box;
                 margin: 0px;
                 padding: 0px;
+            }
+
+            .observacao {
+                background: lightyellow;
+                border-radius: 5px;
+                padding: 5px;
             }
 
             body {
@@ -54,11 +60,89 @@
     </head>
     <body>
         <header>
-            <h1>Teste</h1>
+            <h1>Operadores (Parte 2)</h1>
         </header>
         <main>
-            <h1>Teste</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae iusto est repellendus nisi. Aperiam minima, omnis, facilis at pariatur id reiciendis nulla, doloribus quis soluta velit. Odit odio dolorum natus?</p>
+            <h1>Operadores que vamos ver nessa aula são os relacionais, lógicos e ternário.</h1>
+            <br>
+            <h2>Operadores relacionais</h2>
+            <br>
+            <p>Começando com os relacionais, operadores relacionais sempre retornam o valor <strong>booleano, verdadeiro ou falso.</strong></p>
+            <br>
+            <p>> Maior que</p>
+            <p>< Menor que</p>
+            <p>>= Maior ou igual a</p>
+            <p><= Menor ou igual a</p>
+            <p>== igual a</p>
+            <p>!= diferente</p>
+            <br>
+            <p><strong>Exemplo:</strong></p>
+            <br>
+            <p>5 > 2 → true</p>
+            <p>7 < 4 → false</p>
+            <p>8 >= 8 → true</p>
+            <p>9 <= 7 → false</p>
+            <p>5 == 5 → true</p>
+            <p>4 != 4 → false</p>
+            <br>
+            <p><strong>Operadores de identidade</strong></p>
+            <br>
+            <p>== Igual</p>
+            <p>Com esse operador verificamos se o valor é igual, não se importando se é do mesmo tipo. Exemplo:</p>
+            <p>5 == ‘5’ → true</p>
+            <br>
+            <p>=== Idêntico</p>
+            <p>Com esse operador verificamos se além do valor é do mesmo tipo, de número para número, String para String e assim por diante. Exemplo:</p>
+            <p>5 === ‘5’ → false</p>
+            <br>
+            <hr>
+            <br>
+            <h2>Operadores lógicos</h2>
+            <br>
+            <p>! Negação</p>
+            <p>&& Conjunção (and/e)</p>
+            <p>|| Disjunção (or/ou)</p>
+            <br>
+            <p><strong>Exemplos:</strong></p>
+            <br>
+            <p><strong>1º Exemplo negação:</strong></p>
+            <p>“Eu quero uma caneta emprestada, mais ela não pode ser azul”</p>
+            <p>ou seja, pode ser de qualquer cor que você ira satisfazer a necessidade da situação.</p>
+            <br>
+            <p><strong>2º Exemplo Conjunção:</strong></p>
+            <p>“Eu quero 2 canetas emprestadas, uma preta e uma vermelha”</p>
+            <p>ou seja, nesse caso tem que ser uma caneta preta e uma vermelha, caso contrário a pessoa não ficara satisfeita.</p>
+            <br>
+            <p><strong>3º Exemplo Disjunção:</strong></p>
+            <p>“Eu quero uma caneta emprestada, pode ser azul ou preta”</p>
+            <p>ou seja, nesse caso a pessoa está dando 2 opções para satisfazer a sua necessidade.</p>
+            <br>
+            <p class="observacao"><strong>NOTA 1: </strong>Quando temos na mesma expressão os valores aritméticos, relacionais e lógicos, eles serão resolvidos por ordem sendo ela a seguinte: <strong>Aritméticos</strong>, <strong>Relacionais</strong> e <strong>Lógicos</strong>.</p>
+            <br>
+            <p class="observacao"><strong>NOTA 2: </strong>Existe uma ordem de precedência para os operadores lógicos, caso os três apareçam na mesma expressão que é a seguinte: <strong>Negação</strong>, <strong>Conjunção (e)</strong>, <strong>Disjunção (ou)</strong>.</p>
+            <br>
+            <hr>
+            <br>
+            <h2>Operador Ternário</h2>
+            <br>
+            <p>O operador ternário é composto por dois símbolos que aparecem na mesma expressão. A interrogação e o dois pontos: ? :</p>
+            <br>
+            <p>Ele se chama ternário por conter 3 partes, a primeira é antes do ponto de interrogação a segunda parte e entre o ponto de interrogação e o dois pontos e a terceira parte e depois do dois pontos.</p>
+            <br>
+            <p>Exemplo:</p>
+            <p>teste ? true : false</p>
+            <br>
+            <p>Como podemos comprovar no exemplo acima, o operador leva esse nome porque ele “trabalha” com três operandos…</p>
+            <br>
+            <p>Primeiro operando: É um teste lógico que retorna ou true (verdadeiro) ou false (falso).</p>
+            <p>Segundo operando: É o resultado verdadeiro da expressão lógica da primeira parte.</p>
+            <p>Terceiro operando: É o resultado falso da expressão lógica da primeira parte.</p>
+            <br>
+            <p>Olhando para um exemplo mais pratico, fica da seguinte forma:</p>
+            <br>
+            <p>media >= 7.0 ? “APROVADO” : “REPROVADO”</p>
+            <br>
+            <p>Nessa expressão estamos dizendo que o aluno estará aprovado caso a média das notas dele seja maior ou igual a 7.0, caso seja menor a mensagem mostrada será de reprovado.</p>
         </main>
         <footer>
             <p>Aulas do Curso de <strong><a href="https://youtube.com/playlist?list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1" target="_blank">JavaScript</a></strong>. Exercícios praticados pelo aluno <strong><a href="https://github.com/Guilherme-Artigas" target="_blank">Guilherme Artigas</a></strong>.</p>
