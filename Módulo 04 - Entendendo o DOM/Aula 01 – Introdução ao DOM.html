@@ -6,12 +6,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <title>Document</title>
+        <title>Aula 01 – Introdução ao DOM</title>
         <style>
             * {
                 box-sizing: border-box;
                 margin: 0px;
                 padding: 0px;
+            }
+
+            .observacao {
+                background: rgba(255, 255, 0, .3);
+                border-radius: 10px 0px 10px 0px;
+                padding: 5px;
             }
 
             body {
@@ -54,11 +60,27 @@
     </head>
     <body>
         <header>
-            <h1>Teste</h1>
+            <h1>Introdução ao DOM</h1>
         </header>
         <main>
-            <h1>Teste</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae iusto est repellendus nisi. Aperiam minima, omnis, facilis at pariatur id reiciendis nulla, doloribus quis soluta velit. Odit odio dolorum natus?</p>
+            <h1>Entendendo o DOM</h1>
+            <p>O modelo de objeto de documentos (do inglês Document Object Model, DOM) é uma API definida pelo W3C para representar e interagir com qualquer documento HTML e XML.</p>
+            <br>
+            <p>O <strong>DOM</strong> é um modelo de documento carregado pelo navegador. Este documento é representado através de uma árvore de nós, onde cada um destes nós representa uma parte do documento (por exemplo: elemento, texto ou comentário).</p>
+            <br>
+            <p>O <strong>DOM</strong> é uma das <strong>API</strong>s mais usadas da web, por que ele permite que cada codigo rodando no navegador acesse e interaja com cada nó do documento. Os nós podem ser criados, movidos ou modificados.</p>
+            <br>
+            <p class="observacao"><strong>NOTA:</strong> Tudo dentro do JavaScript está dentro de um objeto chamado <strong>window</strong>, dentro do <strong>window</strong> temos vários outros objetos podemos citar como exemplo <strong>location</strong>, <strong>document</strong>, <strong>history</strong>, seguindo a construção da nossa árvore hierárquica temos como filho de <strong>document</strong> o <strong>html</strong> e filhos de <strong>html</strong> são <strong>head</strong> e o <strong>body</strong>, todo site possui uma árvore hierárquica contendo pais e filhos.</p>
+            <br>
+            <hr>
+            <br>
+            <h2>Formas de acesso aos elementos com JS</h2>
+            <br>
+            <p>Por Marca (Tag): window.document.getElementsByTagName()</p>
+            <p>Por ID: window.document.getElementById()</p>
+            <p>Por Nome: window.document.getElementsByName()</p>
+            <p>Por Classe: window.document.getElementsByClassName()</p>
+            <p>Por Seletor (presente nas versões mais recentes do EcmaScript): window.document.querySelector()</p>
         </main>
         <footer>
             <p>Aulas do Curso de <strong><a href="https://youtube.com/playlist?list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1" target="_blank">JavaScript</a></strong>. Exercícios praticados pelo aluno <strong><a href="https://github.com/Guilherme-Artigas" target="_blank">Guilherme Artigas</a></strong>.</p>
