@@ -6,12 +6,47 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <title>Document</title>
+        <title>Aula 02 – Eventos DOM</title>
         <style>
             * {
                 box-sizing: border-box;
                 margin: 0px;
                 padding: 0px;
+            }
+
+            .observacao {
+                background: rgba(255, 255, 0, .3);
+                border-radius: 10px 0px 10px 0px;
+                padding: 5px;
+            }
+
+            div {
+                display: inline-block;
+                font-size: 25px;
+                font-weight: bolder;
+                height: 200px;
+                line-height: 200px;
+                margin: 0px 0px 5px 0px;
+                text-align: center;
+                width: 200px;
+            }
+            div#bloco-azul {
+                background: royalblue;
+            }
+            div#bloco-verde {
+                background: seagreen;
+            }
+            div#bloco-amarelo {
+                background: yellow;
+            }
+            div#bloco-rosa {
+                background: violet;
+            }
+            div#bloco-laranja {
+                background: darkorange;
+            }
+            div#bloco-vermelho {
+                background: firebrick;
             }
 
             body {
@@ -42,6 +77,18 @@
             main > h1 {
                 margin: 10px 0px;
             }
+            main > h2 {
+                text-align: center;
+            }
+
+            input {
+                width: 50px;
+            }
+
+            p#resultado {
+                font-weight: bolder;
+                margin: 10px 0px 0px 0px;
+            }
 
             footer {
                 border-radius: 0px 0px 5px 5px;
@@ -54,14 +101,80 @@
     </head>
     <body>
         <header>
-            <h1>Teste</h1>
+            <h1>Eventos DOM</h1>
         </header>
         <main>
-            <h1>Teste</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae iusto est repellendus nisi. Aperiam minima, omnis, facilis at pariatur id reiciendis nulla, doloribus quis soluta velit. Odit odio dolorum natus?</p>
+            <h1>Referência de eventos</h1>
+            <p>Eventos Dom (Dom Events) são utilizados para notificar o código de novidades durante a navegação do usuário. Cada evento é representado por um objeto que é baseado na interface Event, e pode ter campos customizados adicionados e/ou funções usadas para obter informações adicionais sobre o que aconteceu. Eventos podem representar desde interações básicas do usuário (cliques, rolagem da página… etc) ate notificações automáticas de novidades no DOM.</p>
+            <br>
+            <p><strong>Somente alguns exemplos:</strong></p>
+            <br>
+            <p><strong>mouseenter: </strong>O mouse, ou dispositivo apontador está acima de um elemento que tem um listener ativo.</p>
+            <p><strong>mousedown: </strong>O mouse, ou dispositivo apontador está pressionando um elemento.</p>
+            <p><strong>mousemove: </strong>O mouse está se movendo enquanto está acima de um elemento com listener.</p>
+            <p><strong>mouseup: </strong>O botão do mouse ou dispositivo foi solto.</p>
+            <p><strong>click: </strong>Um botão ou dispositivo apontador foi clicado e solto.</p>
+            <p><strong>mouseout: </strong>O mouse foi removido do elemento com um listener, ou em um de seus filhos.</p>
+            <br>
+            <p class="observacao"><strong>NOTA: </strong>Eventos dentro do DOM são disparados com funções internas do JavaScript, uma função é um conjunto de linhas de código que formam um bloco, delimitado por abre chave e fecha chave.</p>
+            <br>
+            <div id="bloco-azul" onclick="clicar()">Interaja...</div>
+            <div id="bloco-verde" onmouseenter="entrar()">Interaja...</div>
+            <div id="bloco-amarelo" onmouseout="sair()">Interaja...</div>
+            <br>
+            <div id="bloco-rosa" onmousemove="mover()">Interaja...</div>
+            <div id="bloco-laranja" onmouseup="soltei()">Interaja...</div>
+            <div id="bloco-vermelho" onmousedown="segurando()">Interaja...</div>
+            <hr>
+            <br>
+            <h2>Somando Valores</h2>
+            <br>
+            <input type="number" name="valor1" id="valor1"> +
+            <input type="number" name="valor2" id="valor2">
+            <input type="button" value="Somar" onclick="somar()">
+            <p id="resultado"></p>
         </main>
         <footer>
             <p>Aulas do Curso de <strong><a href="https://youtube.com/playlist?list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1" target="_blank">JavaScript</a></strong>. Exercícios praticados pelo aluno <strong><a href="https://github.com/Guilherme-Artigas" target="_blank">Guilherme Artigas</a></strong>.</p>
         </footer>
+        <script>
+            function clicar() {
+                // 1º forma de se fazer
+                // var bloco_azul = window.document.getElementById('bloco-azul')
+                // bloco_azul.innerText = 'Clicou!'
+
+                // 2º forma de se fazer, sem a declaração da variável
+                window.document.getElementById('bloco-azul').innerText = 'Clicou!!'
+            }
+
+            function entrar() {
+                window.document.getElementById('bloco-verde').innerText = 'Entrou!'
+            }
+
+            function sair() {
+                window.document.getElementById('bloco-amarelo').innerText = 'Saiu...'
+            }
+
+            function mover() {
+                window.document.getElementById('bloco-rosa').innerText = 'Moveu!'
+            }
+
+            function soltei() {
+                window.document.getElementById('bloco-laranja').innerText = 'Soltei o Clique.'
+            }
+
+            function segurando() {
+                window.document.getElementById('bloco-vermelho').innerText = 'Segurando.'
+            }
+
+            function somar() {
+                var v1 = window.document.getElementById('valor1')
+                var v2 = window.document.getElementById('valor2')
+                var numero1 = Number(v1.value)
+                var numero2 = Number(v2.value)
+                var soma = numero1 + numero2
+                window.document.getElementById('resultado').innerText = `Resultado entre a soma de ${numero1} e ${numero2} = ${soma}`
+            }
+        </script>
     </body>
 </html>
