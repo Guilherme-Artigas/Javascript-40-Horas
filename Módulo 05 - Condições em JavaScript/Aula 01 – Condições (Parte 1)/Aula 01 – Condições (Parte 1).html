@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <title>Aula 01 – Condições (Parte 1)</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0px;
+                padding: 0px;
+            }
+
+            body {
+                background: skyblue;
+            }
+
+            p.centralizado {
+                text-align: center;
+            }
+
+            header, main, footer {
+                background: white;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0px auto;
+                max-width: 80%;
+                padding: 5px;
+            }
+
+            header {
+                border-radius: 5px 5px 0px 0px;
+                margin: 5px auto 0px auto;
+                text-align: center;
+            }
+            header > h1 {
+                font-size: 60px;
+            }
+
+            main {
+                margin: 5px auto 10px auto;
+                text-align: justify;
+            }
+            main > h1 {
+                margin: 10px 0px;
+            }
+            main > pre {
+                margin: 0px 0px 0px -90px;
+            }
+            main > h3 {
+                text-align: center;
+            }
+            main > input {
+                display: block;
+                margin: 2px auto;
+                width: 80px;
+            }
+            main > input#nacionalidade {
+                display: block;
+                margin: 2px auto;
+                width: 150px;
+            }
+            main > p#resultado {
+                color: green;
+                font-size: 32px;
+                font-weight: bolder;
+                margin: 5px 0px 0px 0px;
+                text-align: center;
+            }
+            main > p#resultado2 {
+                color: orangered;
+                font-size: 32px;
+                font-weight: bolder;
+                margin: 5px 0px 0px 0px;
+                text-align: center;
+            }
+            main > p#resultado3 {
+                color: orangered;
+                font-size: 32px;
+                font-weight: bolder;
+                margin: 5px 0px 0px 0px;
+                text-align: center;
+            }
+
+            footer {
+                border-radius: 0px 0px 5px 5px;
+                text-align: center;
+            }
+            a:visited {
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Condições (Parte 1)</h1>
+        </header>
+        <main>
+            <h1>Desvio condicional</h1>
+            <p>A condicional if é uma estrutura que executa a afirmação, dentro do bloco, se determinada condição for verdadeira. Se for falsa, executa as afirmações dentro de else.</p>
+            <br>
+            <h2>Condição</h2>
+            <br>
+            <p>Dentro da programação a condicional é uma expressão (premissa) que pode ser avaliada como verdadeira (true) ou falsa (false), é necessário ter conhecimentos básicos de lógica de programação para entender esse conceito de uma melhor forma.</p>
+            <br>
+            <p><strong>Sintaxe:</strong></p>
+            <br>
+            <pre>
+                if (condição) {
+                    instrução1
+                }
+                else {
+                    instrução2
+                }
+            </pre>
+            <hr>
+            <br>
+            <h3>Departamento nacional de trânsito</h3>
+            <br>
+            <p class="centralizado">Qual a velocidade do veículo em KM/h:</p>
+            <input type="number" name="valor1" id="valor1">
+            <input type="button" value="Verificar" onclick="limite_velocidade()">
+            <p id="resultado"></p>
+            <p id="resultado2"></p>
+            <br>
+            <hr>
+            <br>
+            <h3>Governo Federal</h3>
+            <br>
+            <p class="centralizado">Digite no campo abaixo a sua Nacionalidade</p>
+            <input type="text" name="nacionalidade" id="nacionalidade">
+            <input type="button" value="Verificar" onclick="verificar_nacionalidade()">
+            <p id="resultado3"></p>
+        </main>
+        <footer>
+            <p>Aulas do Curso de <strong><a href="https://youtube.com/playlist?list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1" target="_blank">JavaScript</a></strong>. Exercícios praticados pelo aluno <strong><a href="https://github.com/Guilherme-Artigas" target="_blank">Guilherme Artigas</a></strong>.</p>
+        </footer>
+        <script>
+            function limite_velocidade() {
+                var v1 = window.document.getElementById('valor1')
+                var velocidade = Number(v1.value)
+                if (velocidade  < 60) {
+                    window.document.getElementById('resultado').innerText = `Parabéns você esta rodando a ${velocidade}KM/h, dentro do limite de velocidade.`
+                } else {
+                    window.document.getElementById('resultado2').innerText = 'Você foi multado, esta acima da velocidade permitida!'
+                }
+            }
+
+            function verificar_nacionalidade() {
+                var nação = window.document.getElementById('nacionalidade')
+                var país = String(nação.value)
+                if (país != 'Brasil') {
+                    window.document.getElementById('resultado3').innerText = 'Você é Estrangeiro!'
+                }
+                else {
+                    window.document.getElementById('resultado3').innerText = 'Você é Brasileiro!'
+                }
+            }
+        </script>
+    </body>
+</html>
