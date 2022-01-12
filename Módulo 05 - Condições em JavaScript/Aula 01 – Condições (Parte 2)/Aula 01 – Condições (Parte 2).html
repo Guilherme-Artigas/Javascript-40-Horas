@@ -74,6 +74,31 @@
                     instrução3
                 }
             </pre>
+            <h2>Switch</h2>
+            <p>A condicional <strong>SWITCH</strong> avalia uma expressão, combinando o valor para uma cláusula CASE, e executa as instruções associadas ao <strong>CASE</strong>.</p>
+            <br>
+            <pre>
+                switch (expressão) {
+                case valor1:
+                    Instruções executadas quando o resultado da expressão for igual à valor1
+                    [break;]
+                case valor2:
+                    Instruções executadas quando o resultado da expressão for igual à valor2
+                    [break;]
+                ...
+                case valueN:
+                    Instruções executadas quando o resultado da expressão for igual à valorN
+                    [break;]
+                default:
+                    Instruções executadas quando o valor da expressão é diferente de todos os cases
+                    [break;]
+                }
+            </pre>
+            <p>Se a condição for correspondida, o programa executa as instruções associadas. Se múltiplos casos corresponderem ao valor, o primeiro que corresponder é selecionado, mesmo se os casos não forem iguais entre si.</p>
+            <br>
+            <p>O programa primeiro procura por um caso o qual a expressão avalie como tendo o mesmo valor que o input da expressão (usando a comparação de igualdade restrita ===, mesmo valor e mesmo tipo.) transferindo assim o controle para a cláusula encontrada e em seguida executando as instruções associadas. Caso nenhum <strong>CASE</strong> seja correspondido, então o programa procura pela cláusula opcional <strong>DEFAULT</strong>, que, se encontrado, tem o controle transferido a ele, executando suas instruções associadas. Se não houver uma cláusula <strong>DEFAULT</strong>, o programa continua a execução da instrução seguindo para o final do <strong>SWITCH</strong>. Por convenção, a cláusula <strong>DEFAULT</strong> é a última, mas não é algo obrigatório.</p>
+            <br>
+            <p>A instrução opcional <strong>BREAK</strong> associada com casa <strong>CASE</strong> garante que o programa saia da condicional <strong>SWITCH</strong> assim que a instrução correspondente for executada. Caso o <strong>BREAK</strong> seja omitido, o programa continua a execução para a próxima instrução <strong>CASE</strong> dentro da estrutura <strong>SWITCH</strong>.</p>
         </main>
         <footer>
             <p>Aulas do Curso de <strong><a href="https://youtube.com/playlist?list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1" target="_blank">JavaScript</a></strong>. Exercícios praticados pelo aluno <strong><a href="https://github.com/Guilherme-Artigas" target="_blank">Guilherme Artigas</a></strong>.</p>
