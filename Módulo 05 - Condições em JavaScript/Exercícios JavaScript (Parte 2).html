@@ -74,13 +74,11 @@
             <p>Aulas do Curso de <strong><a href="https://youtube.com/playlist?list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1" target="_blank">JavaScript</a></strong>. Exercícios praticados pelo aluno <strong><a href="https://github.com/Guilherme-Artigas" target="_blank">Guilherme Artigas</a></strong>.</p>
         </footer>
         <script>
-            var pega_dia = new Date()
-            var pega_hora = new Date()
-            var pega_minuto = new Date()
+            var tempo = new Date()
 
-            var dia_atual = pega_dia.getDay()
-            var hora_atual = pega_hora.getHours()
-            var minuto_atual = pega_minuto.getMinutes()
+            var dia_atual = tempo.getDay()
+            var hora_atual = tempo.getHours()
+            var minuto_atual = tempo.getMinutes()
 
             var dia
             switch(dia_atual) {
@@ -109,10 +107,10 @@
              
             window.document.getElementById('recebe_hora').innerText = `Hoje é ${dia} e agora são exatamente ${hora_atual} horas e ${minuto_atual} minutos.`
 
-            if (hora_atual > 6 && hora_atual < 12) {
+            if (hora_atual >= 0 && hora_atual < 12) {
                 window.document.body.style.background = 'PapayaWhip';
                 window.document.getElementById('estado_dia').src = '_img/img-bomdia-250x250px.jpg';
-            } else if (hora_atual < 18) {
+            } else if (hora_atual < 19) {
                 window.document.body.style.background = 'LightSalmon';
                 window.document.getElementById('estado_dia').src = '_img/img-por-do-sol-250x250px.jpg';
             } else {
