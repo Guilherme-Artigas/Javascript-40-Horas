@@ -103,19 +103,20 @@
                 case 6:
                     dia = 'Sábado'
                     break
-            }
-             
-            window.document.getElementById('recebe_hora').innerText = `Hoje é ${dia} e agora são exatamente ${hora_atual} horas e ${minuto_atual} minutos.`
+            } 
 
             if (hora_atual >= 0 && hora_atual < 12) {
                 window.document.body.style.background = 'PapayaWhip';
                 window.document.getElementById('estado_dia').src = '_img/img-bomdia-250x250px.jpg';
+                window.document.getElementById('recebe_hora').innerText = `Hoje é ${dia} e agora são exatamente ${hora_atual} horas e ${minuto_atual} minutos, Bom dia!`
             } else if (hora_atual < 19) {
                 window.document.body.style.background = 'LightSalmon';
                 window.document.getElementById('estado_dia').src = '_img/img-por-do-sol-250x250px.jpg';
+                window.document.getElementById('recebe_hora').innerText = `Hoje é ${dia} e agora são exatamente ${hora_atual} horas e ${minuto_atual} minutos, Boa tarde!`
             } else {
                 window.document.body.style.background = 'DimGray';
                 window.document.getElementById('estado_dia').src = '_img/img-noite-250x250px.jpg';
+                window.document.getElementById('recebe_hora').innerText = `Hoje é ${dia} e agora são exatamente ${hora_atual} horas e ${minuto_atual} minutos, Boa noite!`
             }
         </script>
     </body>

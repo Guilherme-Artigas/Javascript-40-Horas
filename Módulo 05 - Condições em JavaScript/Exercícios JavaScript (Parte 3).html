@@ -41,6 +41,21 @@
             }
             main > h1 {
                 margin: 10px 0px;
+                text-align: center;
+            }
+            input {
+                margin: 10px 0px;
+            }
+            input#nascimento {
+                width: 50px;
+            }
+            p#recebe_informacoes {
+                text-align: center;
+            }
+            img#recebe_img {
+                border-radius: 125px;
+                display: block;
+                margin: 50px auto 10px auto;
             }
 
             footer {
@@ -57,11 +72,96 @@
             <h1>Exercícios JavaScript (Parte 3)</h1>
         </header>
         <main>
-            <h1>Teste</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae iusto est repellendus nisi. Aperiam minima, omnis, facilis at pariatur id reiciendis nulla, doloribus quis soluta velit. Odit odio dolorum natus?</p>
+            <h1>Verificador de idade</h1>
+            <p>Ano de Nascimento:
+                <input type="number" name="nascimento" id="nascimento">
+            </p>
+            <p>Sexo:
+                <input type="radio" name="sexo" id="masculino" checked>
+                <label for="masculino">Masculino</label>
+                <input type="radio" name="sexo" id="feminino">
+                <label for="feminino">Feminino</label>
+            </p>
+            <input type="button" value="Verificar" onclick="verificador()">
+            <br>
+            <p id="recebe_informacoes"></p>
+            <img src="" alt="" id="recebe_img">
         </main>
         <footer>
             <p>Aulas do Curso de <strong><a href="https://youtube.com/playlist?list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1" target="_blank">JavaScript</a></strong>. Exercícios praticados pelo aluno <strong><a href="https://github.com/Guilherme-Artigas" target="_blank">Guilherme Artigas</a></strong>.</p>
         </footer>
+        <script>
+            function verificador() {
+                var pega_ano_sistema = new Date()
+                var ano_sistema = pega_ano_sistema.getFullYear()
+
+                var pega_ano_html = window.document.getElementById('nascimento')
+                var ano_nascimento = Number(pega_ano_html.value)
+
+                if (ano_nascimento > 1930 && ano_nascimento < ano_sistema) {
+                    var sexo = window.document.getElementsByName('sexo')
+                    var idade = ano_sistema - ano_nascimento
+                    var genero = ''
+
+                    if (sexo[0].checked) {
+                        genero = 'Homem'
+                    } else if (sexo[1].checked) {
+                        genero = 'Mulher'
+                    }
+
+                    if (idade > 1 && idade <= 5) {
+                        if (genero == 'Homem') {
+                            window.document.getElementById('recebe_informacoes').innerText = `Gênero: ${genero} com ${idade} anos de idade.`
+                            window.document.getElementById('recebe_img').src = '_img/homem-bebe.jpg'
+                        } else if (genero == 'Mulher') {
+                            window.document.getElementById('recebe_informacoes').innerText = `Gênero: ${genero} com ${idade} anos de idade.`
+                            window.document.getElementById('recebe_img').src = '_img/mulher-bebe.jpg'
+                        }
+                    } else if (idade == 1) {
+                        if (genero == 'Homem') {
+                            window.document.getElementById('recebe_informacoes').innerText = `Gênero: ${genero} com ${idade} ano de idade.`
+                            window.document.getElementById('recebe_img').src = '_img/homem-bebe.jpg'
+                        } else if (genero == 'Mulher') {
+                            window.document.getElementById('recebe_informacoes').innerText = `Gênero: ${genero} com ${idade} ano de idade.`
+                            window.document.getElementById('recebe_img').src = '_img/mulher-bebe.jpg'
+                        }
+                    }
+
+                    if (idade > 6 && idade <= 20) {
+                        if (genero == 'Homem') {
+                            window.document.getElementById('recebe_informacoes').innerText = `Gênero: ${genero} com ${idade} anos de idade.`
+                            window.document.getElementById('recebe_img').src = '_img/homem-jovem.jpg'
+                        } else if (genero == 'Mulher') {
+                            window.document.getElementById('recebe_informacoes').innerText = `Gênero: ${genero} com ${idade} anos de idade.`
+                            window.document.getElementById('recebe_img').src = '_img/mulher-jovem.jpg'
+                        }
+                    }
+
+                    if (idade > 20 && idade <= 60) {
+                        if (genero == 'Homem') {
+                            window.document.getElementById('recebe_informacoes').innerText = `Gênero: ${genero} com ${idade} anos de idade.`
+                            window.document.getElementById('recebe_img').src = '_img/homem-adulto.jpg'
+                        } else if (genero == 'Mulher') {
+                            window.document.getElementById('recebe_informacoes').innerText = `Gênero: ${genero} com ${idade} anos de idade.`
+                            window.document.getElementById('recebe_img').src = '_img/mulher-adulta.jpg'
+                        }
+                    }
+
+                    if (idade > 60) {
+                        if (genero == 'Homem') {
+                            window.document.getElementById('recebe_informacoes').innerText = `Gênero: ${genero} com ${idade} anos de idade.`
+                            window.document.getElementById('recebe_img').src = '_img/homem-idoso.jpg'
+                        } else if (genero == 'Mulher') {
+                            window.document.getElementById('recebe_informacoes').innerText = `Gênero: ${genero} com ${idade} anos de idade.`
+                            window.document.getElementById('recebe_img').src = '_img/mulher-idosa.jpg'
+                        }
+                    }
+
+                } else {
+                    window.document.getElementById('recebe_informacoes').innerText = `[ERRO] Dados digitados são inválidos. Idade não identificada...`
+                    window.document.getElementById('recebe_img').src = '_img/avatar-250x250px.png'
+                }
+            }
+        </script>
     </body>
 </html>
