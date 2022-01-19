@@ -42,6 +42,9 @@
             main > h1 {
                 margin: 10px 0px;
             }
+            main > pre {
+                margin: 0px 0px 0px -100px;
+            }
 
             footer {
                 border-radius: 0px 0px 5px 5px;
@@ -54,11 +57,39 @@
     </head>
     <body>
         <header>
-            <h1>Teste</h1>
+            <h1>Aula 01 – Repetições (Parte 1)</h1>
         </header>
         <main>
-            <h1>Teste</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae iusto est repellendus nisi. Aperiam minima, omnis, facilis at pariatur id reiciendis nulla, doloribus quis soluta velit. Odit odio dolorum natus?</p>
+            <h1>While</h1>
+            <p>A declaração while cria um laço que executa uma rotina especifica enquanto a condição de teste for avaliada como verdadeira. A condição é avaliada antes da rotina.</p>
+            <br>
+            <p><strong>Sintaxe:</strong></p>
+            <br>
+            <pre>
+                while (condição) {
+                    rotina
+                }
+            </pre>
+            <h2>Condição</h2>
+            <br>
+            <p>É uma expressão avaliada anetes de cada passagem através do laço. Se essa condição for avaliada como verdadeira, a rotina é executada. Quando a condição for avaliada como falsa, o programa segue o fluxo passando para a próxima linha de comando logo abaixo do fechamento de chaves do bloco while.</p>
+            <br>
+            <h2>Rotina</h2>
+            <br>
+            <p>Rotina é uma declaração que é executada enquanto uma condição é avaliada como verdadeira. Para executar múltiplas declarações devemos usar as chaves ({…}) para agrupá-las.</p>
+            <br>
+            <p><strong>Exemplo:</strong></p>
+            <br>
+            <pre>
+                var controle = 0
+                var n1 = 0
+
+                while (controle < 3) {
+                    controle++
+                    n1 = n1 + controle
+                    // n1 += controle
+                }
+            </pre>
         </main>
         <footer>
             <p>Aulas do Curso de <strong><a href="https://youtube.com/playlist?list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1" target="_blank">JavaScript</a></strong>. Exercícios praticados pelo aluno <strong><a href="https://github.com/Guilherme-Artigas" target="_blank">Guilherme Artigas</a></strong>.</p>
