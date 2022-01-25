@@ -61,7 +61,7 @@
         </header>
         <main>
             <h1>While</h1>
-            <p>A declaração while cria um laço que executa uma rotina especifica enquanto a condição de teste for avaliada como verdadeira. A condição é avaliada antes da rotina.</p>
+            <p>A declaração while cria um laço que executa uma rotina especifica enquanto a condição de teste for avaliada como verdadeira. A estrutura while tem o teste lógico no começo do bloco, antes mesmo de executar-se as instruções testa se a condição e true, isso é muito importante, pois, temos uma estrutura muito parecida mais que faz o teste lógico no final da execução do bloco, ou seja, primeiro se executa a instrução depois verifica-se se a condição é verdadeira para fazer o laço de repetição entrar em looping.</p>
             <br>
             <p><strong>Sintaxe:</strong></p>
             <br>
@@ -90,12 +90,22 @@
                     // n1 += controle
                 }
             </pre>
+            <h1>Do... while ()</h1>
+            <p>De forma muito parecida com o while existe a estrutura do… while () {}, que realiza o teste lógico condicional no final do bloco de comandos, ela é muito útil para casos em que precisamos executar o código antes de testar a condição.</p>
+            <br>
+            <p><strong>Exemplo:</strong></p>
+            <br>
+            <pre>
+                var controle = 0
+
+                do {
+                    instrução
+                    controle++ ou controle += 1 ou controle = controle + 1
+                } while (controle >= 10)
+            </pre>
         </main>
         <footer>
             <p>Aulas do Curso de <strong><a href="https://youtube.com/playlist?list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1" target="_blank">JavaScript</a></strong>. Exercícios praticados pelo aluno <strong><a href="https://github.com/Guilherme-Artigas" target="_blank">Guilherme Artigas</a></strong>.</p>
         </footer>
-        <script>
-            // Parei no minuto 10:15 da aula 1 módulo 6!
-        </script>
     </body>
 </html>
