@@ -113,32 +113,9 @@
                     controle++ ou controle += 1 ou controle = controle + 1
                 } while (controle >= 10)
             </pre>
-            <br>
-            <hr>
-            <br>
-            <h3 class="texto_centralizado">Tabuada</h3>
-            <br>
-            <p class="texto_centralizado">Digite no campo abaixo um valor entre 2 e 10 para descobrir a sua tabuada:</p>
-            <input type="number" name="valor1" id="valor1" min="2" max="10">
-            <input type="button" value="Verificar" onclick="tabuada()">
-            <p id="recebe_tabuada"></p>
         </main>
         <footer>
             <p>Aulas do Curso de <strong><a href="https://youtube.com/playlist?list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1" target="_blank">JavaScript</a></strong>. Exercícios praticados pelo aluno <strong><a href="https://github.com/Guilherme-Artigas" target="_blank">Guilherme Artigas</a></strong>.</p>
         </footer>
-        <script>
-            function tabuada() {
-                var pega_tabuada_html = window.document.getElementById('valor1')
-                var tabuada = Number(pega_tabuada_html.value)
-                var controle = 0
-                while (controle <= 10) {
-                    window.document.getElementById('recebe_tabuada').innerText = controle
-                    controle++
-                    // controle += 1
-                    // controle = controle + 1
-                }
-                // window.document.getElementById('recebe_tabuada').innerText = tabuada
-            }
-        </script>
     </body>
 </html>

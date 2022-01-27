@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <title>Aula 01 – Repetições (Parte 2)</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0px;
+                padding: 0px;
+            }
+
+            body {
+                background: skyblue;
+            }
+
+            header, main, footer {
+                background: white;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0px auto;
+                max-width: 80%;
+                padding: 5px;
+            }
+
+            header {
+                border-radius: 5px 5px 0px 0px;
+                margin: 5px auto 0px auto;
+                text-align: center;
+            }
+            header > h1 {
+                font-size: 60px;
+            }
+
+            main {
+                margin: 5px auto 10px auto;
+                text-align: justify;
+            }
+            main > h1 {
+                margin: 10px 0px;
+            }
+            main > pre {
+                margin: 0px 0px 0px -100px;
+            }
+
+            footer {
+                border-radius: 0px 0px 5px 5px;
+                text-align: center;
+            }
+            a:visited {
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Repetições (Parte 2)</h1>
+        </header>
+        <main>
+            <h1>for</h1>
+            <p>A instrução for cria um loop que consiste em três expressões opcionais, dentro de parênteses e separadas por ponto de vírgula, seguidas por uma declaração ou uma sequência de declarações executadas em sequência.</p>
+            <br>
+            <h2>Sintaxe</h2>
+            <br>
+            <pre>
+                for (inicialização; condição; incremento) {
+                    conjunto de instruções
+                }
+            </pre>
+            <br>
+            <h3>Inicialização</h3>
+            <br>
+            <p>Uma expressão (incluindo expressões de atribuição) ou declarações variáveis. Geralmente usada para iniciar o contador de variai veis. Esta expressão pode, opcionalmente, declarar novas variáveis com a palavra-chave var. Essas variáveis não são locais no loop, isto é, elas estão no mesmo escopo que o loop for esta. Variáveis declaradas com let são locais para a declaração.</p>
+            <br>
+            <h3>Condição</h3>
+            <br>
+            <p>Uma expressão para ser avaliada antes de cada iteração do loop. Se esta expressão for avaliada como true, a declaração digitada entre as chaves será executada. Este teste da condição é opcional. Se omitido, a condição sempre será avaliada como verdadeira. Se a expressão for avaliada como falsa, a execução irá para a primeira linha de códigos após a construção do loop for.</p>
+            <br>
+            <h3>Expressão final/Incremento</h3>
+            <br>
+            <p>Uma expressão que será validada no final de cada iteração do loop. Isso ocorre antes da próxima avaliação da condição. Geralmente usado para atualizar ou incrementar a variável do contador. Diferente da condição essa declaração não pode ser omitida, caso contrário o script entrara em looping infinito, travando o seu código.</p>
+        </main>
+        <footer>
+            <p>Aulas do Curso de <strong><a href="https://youtube.com/playlist?list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1" target="_blank">JavaScript</a></strong>. Exercícios praticados pelo aluno <strong><a href="https://github.com/Guilherme-Artigas" target="_blank">Guilherme Artigas</a></strong>.</p>
+        </footer>
+    </body>
+</html>
