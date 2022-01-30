@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <title>Document</title>
+        <title>Exercícios JavaScript (Parte 2)</title>
         <style>
             * {
                 box-sizing: border-box;
@@ -41,6 +41,19 @@
             }
             main > h1 {
                 margin: 10px 0px;
+                text-align: center;
+            }
+            main > p {
+                text-align: center;
+            }
+            main > input {
+                display: block;
+                margin: 5px auto;
+            }
+            main > span {
+                display: block;
+                margin: 5px auto;
+                text-align: center;
             }
 
             footer {
@@ -54,14 +67,55 @@
     </head>
     <body>
         <header>
-            <h1>Teste</h1>
+            <h1>Exercícios JavaScript (Parte 2)</h1>
         </header>
         <main>
-            <h1>Teste</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae iusto est repellendus nisi. Aperiam minima, omnis, facilis at pariatur id reiciendis nulla, doloribus quis soluta velit. Odit odio dolorum natus?</p>
+            <h1>Contagem</h1>
+            <p>Início: <input type="number" name="inicio_contagem" id="inicio_contagem" min="0" max="1000"></p>
+            <p>Fim: <input type="number" name="fim_contagem" id="fim_contagem" min="1" max="1000"></p>
+            <p>Passo: <input type="number" name="passo_contagem" id="passo_contagem" min="1" max="100"></p>
+            <input type="button" value="Iniciar" onclick="contagem()">
+            <br>
+            <span id="recebe_contagem">Aguardando dados para tratamento!</span>
         </main>
         <footer>
             <p>Aulas do Curso de <strong><a href="https://youtube.com/playlist?list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1" target="_blank">JavaScript</a></strong>. Exercícios praticados pelo aluno <strong><a href="https://github.com/Guilherme-Artigas" target="_blank">Guilherme Artigas</a></strong>.</p>
         </footer>
+        <script>
+            function contagem() {
+                var pega_inicio_contagem_html = window.document.getElementById('inicio_contagem')
+                var pega_fim_contagem_html = window.document.getElementById('fim_contagem')
+                var pega_passo_contagem_html = window.document.getElementById('passo_contagem')
+
+                var inicio_contagem = Number(pega_inicio_contagem_html.value)
+                var fim_contagem = Number(pega_fim_contagem_html.value)
+                var passo_contagem = Number(pega_passo_contagem_html.value)
+
+                if (inicio_contagem < fim_contagem) {
+                    if (passo_contagem <= 0) {
+                        passo_contagem = 1
+                    }
+                    window.document.getElementById('recebe_contagem').innerHTML = `Contando:<br>`
+                    while (inicio_contagem <= fim_contagem) {
+                        window.document.getElementById('recebe_contagem').innerHTML += `\u{1f449}${inicio_contagem}<br>`
+                        inicio_contagem += passo_contagem
+                    }
+                    window.document.getElementById('recebe_contagem').innerHTML += `\u{1f3c1}`
+                } else if (inicio_contagem > fim_contagem) {
+                    if (passo_contagem <= 0) {
+                        passo_contagem = 1
+                    }
+                    window.document.getElementById('recebe_contagem').innerHTML = `Contando:<br>`
+                    while (inicio_contagem >= fim_contagem) {
+                        window.document.getElementById('recebe_contagem').innerHTML += `\u{1f449}${inicio_contagem}<br>`
+                        inicio_contagem -= passo_contagem
+                    }
+                    window.document.getElementById('recebe_contagem').innerHTML += `\u{1f3c1}`
+                } else {
+                    window.alert(`[ERRO] Impossível contar!!!`)
+                    window.document.location.reload(true)
+                }
+            }
+        </script>
     </body>
 </html>
