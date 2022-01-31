@@ -84,9 +84,18 @@
                 
                 controle = 0
                 window.document.getElementById('recebe_tabuada').innerHTML += `<br>`
-                while (controle <= 10) {
+                // while (controle <= 10) {
+                //     window.document.getElementById('recebe_tabuada').innerHTML += `${valor_tabuada} x ${controle} = ${valor_tabuada*controle}<br>`
+                //     controle++
+                // }
+                
+                // do {
+                //     window.document.getElementById('recebe_tabuada').innerHTML += `${valor_tabuada} x ${controle} = ${valor_tabuada*controle}<br>`
+                //     controle++
+                // } while (controle <= 10)
+
+                for (controle = 0; controle <= 10; controle++) {
                     window.document.getElementById('recebe_tabuada').innerHTML += `${valor_tabuada} x ${controle} = ${valor_tabuada*controle}<br>`
-                    // controle++
                 }
             }
         </script>
