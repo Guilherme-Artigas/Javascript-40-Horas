@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <title>Document</title>
+        <title>Exercícios JavaScript (Parte 3)</title>
         <style>
             * {
                 box-sizing: border-box;
@@ -32,7 +32,7 @@
                 text-align: center;
             }
             header > h1 {
-                font-size: 60px;
+                font-size: 48px;
             }
 
             main {
@@ -41,6 +41,17 @@
             }
             main > h1 {
                 margin: 10px 0px;
+                text-align: center;
+            }
+            main > p {
+                text-align: center;
+            }
+            main input {
+                width: 50px;
+            }
+            main > span {
+                display: block;
+                text-align: center;
             }
 
             footer {
@@ -54,14 +65,30 @@
     </head>
     <body>
         <header>
-            <h1>Teste</h1>
+            <h1>Exercícios JavaScript (Parte 3)</h1>
         </header>
         <main>
-            <h1>Teste</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae iusto est repellendus nisi. Aperiam minima, omnis, facilis at pariatur id reiciendis nulla, doloribus quis soluta velit. Odit odio dolorum natus?</p>
+            <h1>Tabuada</h1>
+            <p>Digite no campo abaixo um valor para descobrirmos a sua tabuada:</p>
+            <p><input type="number" name="valor_tabuada" id="valor_tabuada"></p>
+            <p><input type="button" value="Iniciar" onclick="tabuada()"></p>
+            <span id="recebe_tabuada"></span>
         </main>
         <footer>
             <p>Aulas do Curso de <strong><a href="https://youtube.com/playlist?list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1" target="_blank">JavaScript</a></strong>. Exercícios praticados pelo aluno <strong><a href="https://github.com/Guilherme-Artigas" target="_blank">Guilherme Artigas</a></strong>.</p>
         </footer>
+        <script>
+            function tabuada() {
+                var pega_tabuada_html = window.document.getElementById('valor_tabuada')
+                var valor_tabuada = Number(pega_tabuada_html.value)
+                
+                controle = 0
+                window.document.getElementById('recebe_tabuada').innerHTML += `<br>`
+                while (controle <= 10) {
+                    window.document.getElementById('recebe_tabuada').innerHTML += `${valor_tabuada} x ${controle} = ${valor_tabuada*controle}<br>`
+                    // controle++
+                }
+            }
+        </script>
     </body>
 </html>
