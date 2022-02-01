@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <title>Aula 01 – Variáveis Compostas</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0px;
+                padding: 0px;
+            }
+
+            body {
+                background: skyblue;
+            }
+
+            header, main, footer {
+                background: white;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0px auto;
+                max-width: 80%;
+                padding: 5px;
+            }
+
+            header {
+                border-radius: 5px 5px 0px 0px;
+                margin: 5px auto 0px auto;
+                text-align: center;
+            }
+            header > h1 {
+                font-size: 48px;
+            }
+
+            main {
+                margin: 5px auto 10px auto;
+                text-align: justify;
+            }
+            main > h1 {
+                margin: 10px 0px;
+            }
+            main > input {
+                width: 100px;
+            }
+
+            footer {
+                border-radius: 0px 0px 5px 5px;
+                text-align: center;
+            }
+            a:visited {
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Variáveis Compostas</h1>
+        </header>
+        <main>
+            <h1>Arrays</h1>
+            <p>Arrays são objetos semelhantes a listas que vêm com uma série de métodos embutidos para realizar operações de travessia e mutação. Nem o tamanho de um array JavaScript nem os tipos de elementos são fixos, já que o tamanho de um array pode ser alterado a qualquer momento e os dados podem ser armazenados em posições contíguas, arrays JavaScript não tem a garantia de serem densos, isso depende de como o programador escolhe usá-los, se esses recursos não são desejáveis para o seu caso em particular, você pode considerar usar arrays tipados.</p>
+            <br>
+            <p>Arrays não podem usar strings como índices, devem ser usados números inteiros.</p>
+            <br>
+            <h2>Sintaxe</h2>
+            <br>
+            <p><code>var frutas = [] <em>// Nesse caso declaramos um vetor vazio que será preenchido no decorrer do código.</em></code></p>
+            <p><code>var frutas = [Maçã, Banana] <em>// Declaração do vetor com dois itens dentro dele.</em></code></p>
+            <p><code>frutas.push('Laranja') // Adicionar um item ao final do array.</code></p>
+            <p><code>frutas.pop('') // Remover um item do final do array.</code></p>
+            <p><code>frutas.shift('') // Remover um item do início da lista.</code></p>
+            <p><code>frutas.unshift('Morango') // Adiciona um item ao início do array.</code></p>
+            <p><code>frutas.indexOf('Banana') // Procura o índice de um item dentro do array.</code></p>
+            <br>
+            <hr>
+            <br>
+            <h3>Praticando</h3>
+            <br>
+            <input type="number" name="valor_adicionar" id="valor_adicionar"> <input type="button" value="Adicionar" onclick="adicionar()">
+            <br>
+            <div id="recebe_coisas"></div>
+            <input type="button" value="Mostrar Lista" onclick="mostrar_lista()">
+        </main>
+        <footer>
+            <p>Aulas do Curso de <strong><a href="https://youtube.com/playlist?list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1" target="_blank">JavaScript</a></strong>. Exercícios praticados pelo aluno <strong><a href="https://github.com/Guilherme-Artigas" target="_blank">Guilherme Artigas</a></strong>.</p>
+        </footer>
+        <script>
+            // function adicionar() {
+            //     var pega_valor_html = window.document.getElementById('valor_adicionar')
+            //     var valor_adicionar = Number(pega_valor_html.value)
+            //     var lista_valores = []
+            //     lista_valores.push(valor_adicionar)
+            //     window.document.getElementById('recebe_coisas').innerHTML = `Valor ${valor_adicionar} adicionado a nossa lista.`
+            //     window.document.getElementById('recebe_coisas').innerHTML += lista_valores
+            // }
+
+            // function mostrar_lista() {
+            //     window.document.getElementById('recebe_coisas').innerHTML = lista_valores
+            // }
+        </script>
+    </body>
+</html>
