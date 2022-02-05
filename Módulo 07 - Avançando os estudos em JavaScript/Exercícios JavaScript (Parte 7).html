@@ -73,21 +73,49 @@
         </footer>
         <script>
             var lista_valores = []
+            var total_valores_adicionados = 0
+            var maior_valor_digitado = 0
+            var menor_valor_digitado = 0
+            var soma_valores_digitados = 0
+            var media_valores_digitados = 0
             
             function adicionar() {
                 var pega_valor_html = window.document.getElementById('valor')
                 var valor = Number(pega_valor_html.value)
 
-                if (lista_valores.indexOf(valor) == -1) {
+                if (valor >= 1 && valor <= 100 && lista_valores.indexOf(valor) == -1) {
                     lista_valores.push(valor)
                     window.document.getElementById('recebe_resultado').innerHTML += `Valor ${valor} foi adicionado à lista de valores \u{1f44d}<br>`
+
+                    total_valores_adicionados += 1
+
+                    if (lista_valores.length == 1) {
+                        maior_valor_digitado = valor
+                        menor_valor_digitado = valor
+                    } else if (valor > maior_valor_digitado) {
+                        maior_valor_digitado = valor
+                    } else if (valor < menor_valor_digitado) {
+                        menor_valor_digitado = valor
+                    }
+
+                    soma_valores_digitados += valor
+
+                    media_valores_digitados = soma_valores_digitados / total_valores_adicionados
+
+                } else if (valor < 1 || valor > 100) {
+                    window.alert(`OPA MEU QUERIDO! ${valor} está fora do intervalo entre 1 e 100 \u{1f614}`)
                 } else {
-                    window.alert(`OPA! ja tem :(`)
+                    window.alert(`OPA MEU QUERIDO! ${valor} ja esta na lista! \u{1f614}`)
                 }
             }
 
             function mostrar_valores() {
-                window.document.getElementById('recebe_resultado2').innerHTML = ` ${lista_valores.length}`
+                window.document.getElementById('recebe_resultado2').innerHTML = `
+                <p>Total valores adicionados à lista: ${total_valores_adicionados} valores</p>
+                <p>Maior valor digitado: ${maior_valor_digitado}</p>
+                <p>Menor Valor digitado: ${menor_valor_digitado}</p>
+                <p>Soma dos valores: ${soma_valores_digitados}</p>
+                <p>Média entre os valores: ${media_valores_digitados}</p>`
             }
         </script>
     </body>
