@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <title>Document</title>
+        <title>Exercícios JavaScript (Parte 7)</title>
         <style>
             * {
                 box-sizing: border-box;
@@ -34,13 +34,18 @@
             header > h1 {
                 font-size: 48px;
             }
-
+            
             main {
                 margin: 5px auto 10px auto;
                 text-align: justify;
             }
-            main > h1 {
-                margin: 10px 0px;
+            main > h1, p, div#recebe_resultado, div#recebe_resultado2 {
+                margin: 3px 0px;
+                text-align: center;
+            }
+            main > input {
+                display: block;
+                margin: 10px auto 0px auto;
             }
 
             footer {
@@ -54,14 +59,36 @@
     </head>
     <body>
         <header>
-            <h1>Teste</h1>
+            <h1>Exercícios JavaScript (Parte 7)</h1>
         </header>
         <main>
-            <h1>Teste</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae iusto est repellendus nisi. Aperiam minima, omnis, facilis at pariatur id reiciendis nulla, doloribus quis soluta velit. Odit odio dolorum natus?</p>
+            <h1>Analisador de Números</h1>
+            <p>Digite um valor entre 1 e 100: <input type="number" name="valor" id="valor" min="1" max="100"> <input type="button" value="Adicionar" onclick="adicionar()"></p>
+            <div id="recebe_resultado"></div>
+            <input type="button" value="Finalizar" onclick="mostrar_valores()">
+            <div id="recebe_resultado2"></div>
         </main>
         <footer>
             <p>Aulas do Curso de <strong><a href="https://youtube.com/playlist?list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1" target="_blank">JavaScript</a></strong>. Exercícios praticados pelo aluno <strong><a href="https://github.com/Guilherme-Artigas" target="_blank">Guilherme Artigas</a></strong>.</p>
         </footer>
+        <script>
+            var lista_valores = []
+            
+            function adicionar() {
+                var pega_valor_html = window.document.getElementById('valor')
+                var valor = Number(pega_valor_html.value)
+
+                if (lista_valores.indexOf(valor) == -1) {
+                    lista_valores.push(valor)
+                    window.document.getElementById('recebe_resultado').innerHTML += `Valor ${valor} foi adicionado à lista de valores \u{1f44d}<br>`
+                } else {
+                    window.alert(`OPA! ja tem :(`)
+                }
+            }
+
+            function mostrar_valores() {
+                window.document.getElementById('recebe_resultado2').innerHTML = ` ${lista_valores.length}`
+            }
+        </script>
     </body>
 </html>
